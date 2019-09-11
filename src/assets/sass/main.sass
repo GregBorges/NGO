@@ -1,0 +1,31 @@
+$primary-color: #41b883
+
+@import "./node_modules/spectre.css/src/spectre"
+@import "./node_modules/spectre.css/src/spectre-exp"
+@import "./node_modules/spectre.css/src/spectre-icons"
+@import "message"
+
+// overrides
+body, html, .off-canvas-sidebar, .panel
+  height: 100%
+a
+  cursor: pointer
+
+// extensions
+.btn-error, .btn-error.loading
+  background: $error-color
+  border-color: darken($error-color, 5%)
+  color: #fff
+
+  &:hover, &:active
+    background: lighten($error-color, 30%)
+    border-color: $error-color
+
+  &:after
+    border: 0.1rem solid #fff !important
+    border-right-color: transparent !important
+    border-top-color: transparent !important
+
+// Utilities
+.borderless
+  border: none
